@@ -1,4 +1,9 @@
+
 import { Component } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
+import { FormControl } from '@angular/forms';
+import { RouterModule, Routes } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -6,8 +11,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'Pokedex';
-
-
+  name = new FormControl('');
+  //title = 'Pokedex';
   
+  constructor(private http:HttpClient){
+    
+  }
+
+  ngOnInit() {
+   
+  }
+ 
+
 }
