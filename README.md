@@ -14,4 +14,4 @@ Run `ng serve --open` for a dev server. Navigate to `http://localhost:4200/`. Th
 
 ## Screenshot
 
-![alt text](https://github.com/ammani94/Pokedex/blob/master/src/assets/Screenshot.png)
+![alt text](https://github.com/ammani94/Pokedex/blob/master/src/assets/Screenshot_pikachu.png)
