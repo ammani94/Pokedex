@@ -12,4 +12,6 @@ https://pokeapi.co/
 
 Run `ng serve --open` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
+## Screenshot
+
 ![alt text](https://github.com/ammani94/Pokedex/blob/master/src/assets/Screenshot.png)
