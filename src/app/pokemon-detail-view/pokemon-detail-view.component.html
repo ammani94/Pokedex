@@ -1,0 +1,89 @@
+<div *ngIf="pokemon_details != null; then itsok else itsnull"></div>
+
+ <ng-template #itsok>
+    <div class="in-the-middle">
+        <h1>{{pokemon_details.name}} n°{{pokemon_details.id}}</h1>
+        <img src="{{pokemon_details.sprites.front_default}}"/>
+    </div>
+      
+  
+      <div id="sections-align">
+          <section class="pricing py-5 section1">
+              <div class="container">
+                <div class="row">
+                  
+                  <div class="col-lg-4">
+                    <div class="card mb-5 mb-lg-0">
+                      <div class="card-body">
+                        <h5 class="card-title text-muted text-uppercase text-center">Informations</h5>
+                        <hr>
+                        
+                          <span class="fa-li"><i class="fas fa-check"></i></span> Base Experience : {{pokemon_details.base_experience}}<br>
+                          <span class="fa-li"><i class="fas fa-check"></i></span> Height : {{pokemon_details.height}}<br>
+                          <span class="fa-li"><i class="fas fa-check"></i></span> Weight : {{pokemon_details.weight}}
+                              
+                      </div>
+                    </div>
+                  </div>
+              
+                  <div class="col-lg-4">
+                    <div class="card mb-5 mb-lg-0">
+                      <div class="card-body">
+                        <h5 class="card-title text-muted text-uppercase text-center">List of games</h5>
+                        <hr>
+                        
+                            <p *ngFor="let pokemon of pokemon_details.game_indices; let i = index">
+  
+                                <span class="fa-li"><i class="fas fa-check"></i></span>{{pokemon.version.name}}
+                                
+                            </p>
+                        
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div class="col-lg-4">
+                    <div class="card">
+                      <div class="card-body">
+                        <h5 class="card-title text-muted text-uppercase text-center">Statistics</h5>
+                        <hr>
+                        
+                            <p *ngFor="let pokemon of pokemon_details.stats; let i = index">
+  
+                                <span class="fa-li"><i class="fas fa-check"></i></span>{{pokemon.stat.name}} : {{pokemon.base_stat}}
+                                
+                            </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+  
+      <section class="pricing py-5 section-moves">
+              <div class="card"> 
+                <div class="card-body">
+                  <h5 class="card-title text-muted text-uppercase text-center">Moves</h5>
+                  <hr>
+                  
+                      <p *ngFor="let pokemon of pokemon_details.moves; let i = index">
+  
+                          <span class="fa-li"><i class="fas fa-check"></i></span>{{pokemon.move.name}}
+                          
+                      </p>
+                    
+            </div> 
+          </div>
+      </section>
+      </div>
+  </ng-template>
+
+  <ng-template #itsnull>
+      
+      <div class="in-the-middle">
+          
+          <img  class="img-error" src="assets/pika.gif" />
+          <p>That pokemon does not exist</p>
+      </div>
+        
+  </ng-template>
